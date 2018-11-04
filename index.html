@@ -13,12 +13,15 @@
 	<script src="library/p5.sound.js"></script>
 	<script src="sketch.js"></script>
 	<script src="logo.js"></script>
+	<script src="lindel.js"></script>
+	<script src="recur.js"></script>
+
 	
 
 	<style>
 		body {
 			margin:0;
-			padding:0;
+			padding:20px;
 			overflow: hidden;
 		}
 		canvas {
@@ -33,5 +36,24 @@
 	</style>
 </head>
 <body>
+<?php echo "hello world"; ?>
+<canvas id="myCanvas" width="200" height="100">
+
+</canvas>
+<script>
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,50);
+ctx.stroke();
+for(let j=0;j<10;j++){
+ctx.moveTo(0,10*j);ctx.lineTo(200,10*j);ctx.stroke();
+}
+</script>
+
+
+
+
 </body>
 </html>
